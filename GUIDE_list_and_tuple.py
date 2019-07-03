@@ -78,12 +78,17 @@ print(square_list)
 
 # Output: [1, 4, 9, 16, 25]
 
-# reversing
+# reversing a list
 square_list.reverse()
 print('Reversed list', square_list)
 
 # Output: [25, 16, 9, 4, 1]
 
+# removing a value
+my_list
+print(my_list)
+
+# clearing a list
 my_list.clear()
 print(my_list)
 
