@@ -1,5 +1,9 @@
 # author: Asmaa Mirkhan ~ 2019
 
+# LISTS AND TUPLES
+
+# ----------------------------------------------------------
+
 # LISTS
 
 # list declaration and appending
@@ -10,11 +14,15 @@ print('After appending:', my_list)
 
 # Output: [0, 15, 12.5, 2, 3, 4, 74, 14, 12]
 
+# -----------------------------------------------------
+
 # inserting at sepecific position (index, value)
 my_list.insert(2, 44)  # inserts the 44 value at 2nd position
 print('After inserting:', my_list)
 
 # Output: [0, 15, 44, 12.5, 2, 3, 4, 74, 14, 12]
+
+# -----------------------------------------------------
 
 # deleting element(s)
 del my_list[0]  # deletes element(s)
@@ -22,11 +30,15 @@ print('After deleting:', my_list)
 
 # Output: [15, 44, 12.5, 2, 3, 4, 74, 14, 12]
 
+# -----------------------------------------------------
+
 # statistical operations
 print('length:', len(my_list), 'min:', min(my_list), 'max:', max(my_list), 'sum:',
       sum(my_list), 'count', my_list.count(2), 'index of 2:', my_list.index(2))
 
 # Output: length: 9 min: 2 max: 74 sum: 180.5 count 1 index of 2: 3
+
+# -----------------------------------------------------
 
 # list slicing
 print('list[1:3]', my_list[1:3])
@@ -46,8 +58,9 @@ print('list[4:]', my_list[4:])
 # positive indexing     [0]   [1]   [2]     [3]      [4]    [5]    [6]
 # negative indexing     [-7]  [-6]  [-5]    [-4]     [-3]   [-2]   [-1]
 
+# -----------------------------------------------------
 
-# list operations
+# Arithmetic operators on lists
 print('+ operation', my_list[2:5] + my_list[3:6])
 print('* operations', my_list[:3]*3)
 
@@ -55,11 +68,14 @@ print('* operations', my_list[:3]*3)
 # [12.5, 2, 3, 2, 3, 4]
 # [15, 44, 12.5, 15, 44, 12.5, 15, 44, 12.5]
 
+# -----------------------------------------------------
+
 # list sorting
 my_list.sort()
 print('Sorted list', my_list)
 # Output: [2, 3, 4, 12, 12.5, 14, 15, 44, 74]
 
+# -----------------------------------------------------
 
 # list comperhansions
 my_filtered_list = [i for i in my_list if i > 11]
@@ -78,15 +94,34 @@ print(square_list)
 
 # Output: [1, 4, 9, 16, 25]
 
+# -----------------------------------------------------
+
 # reversing a list
 square_list.reverse()
 print('Reversed list', square_list)
 
 # Output: [25, 16, 9, 4, 1]
 
+# -----------------------------------------------------
+
+# My list
+print('My list',my_list)
+
+# Output: [2, 3, 4, 12, 12.5, 14, 15, 44, 74]
+
 # removing a value
-my_list
-print(my_list)
+# removes first value that satisfies in the list
+my_list.remove(3)
+print('After removing',my_list)
+
+# Output: [2, 4, 12, 12.5, 14, 15, 44, 74]
+
+# removing item by pop
+# removes the item and returns its value
+# NOTE: pop's parameter is an index not a value ==> pop([i])
+print('Removing by pop', my_list.pop(2),my_list)
+
+# Output: 12 [2, 4, 12.5, 14, 15, 44, 74]
 
 # clearing a list
 my_list.clear()
@@ -94,9 +129,13 @@ print(my_list)
 
 # Output: []
 
-# in operation
+# -----------------------------------------------------
+
+# IN operation
 print('25? ', 25 in square_list)
 # Output: True
+
+# -----------------------------------------------------
 
 # iterating
 for val in square_list:
@@ -133,6 +172,8 @@ print(sample_tuple)
 # (1, 2, 5, 'asmaa', [-88, -55, 13])
 # (15, 11.5, 13)
 
+# -----------------------------------------------------
+
 # tuple indexing and slicing
 print('indexing', some_tuple[1], some_tuple[3]
       [2], some_tuple[-1], some_tuple[1:4])
@@ -140,13 +181,15 @@ print('indexing', some_tuple[1], some_tuple[3]
 # Output: 2 m [-88, -55, 13] (2, 5, 'asmaa')
 
 # Note: tuples are immutable
-# some_tuple[0]=2 #ERROR
+# ==> some_tuple[0]=2 #ERROR
 some_tuple[-1][2] = 1111  # OK, element is itself a mutable datatype
 print('Changed tuple:', some_tuple)
 
 # Output: (1, 2, 5, 'asmaa', [-88, -55, 1111])
 
-# tuple operations
+# -----------------------------------------------------
+
+# arithmetic operators on tuples
 sample_tuple = some_tuple + (47, 48, 49)
 print('+ operation', sample_tuple)
 sample_tuple = (11, 22, 33)*3
@@ -155,6 +198,8 @@ print('* operation', sample_tuple)
 # Output
 # (1, 2, 5, 'asmaa', [-88, -55, 1111], 47, 48, 49)
 # (11, 22, 33, 11, 22, 33, 11, 22, 33)
+
+# -----------------------------------------------------
 
 # deleting a tuple
 del sample_tuple
