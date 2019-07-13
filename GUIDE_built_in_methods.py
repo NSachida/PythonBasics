@@ -38,7 +38,7 @@ print('any() with dictionaries:', any(dict1),
 
 # ------------------------------------------------------------------
 
-# any(structure)
+# all(structure)
 # explanation: returns True only if all elements of the iterabale structure are True
 print()
 # with lists
