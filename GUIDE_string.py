@@ -61,11 +61,22 @@ print('Membership: ', 'h' in my_string, 'm' in my_string)
 # -----------------------------------
 
 # string formatting
-my_string = 'name: {}, surname: {}'
-my_string = my_string.format('asmaa', 'mirkhan')
-print('Formatting: ', my_string)
 
-# Output: name: asmaa, surname: mirkhan
+# %s - String (or any object with a string representation, like numbers)
+# %d - Integers
+# %f - Floating point numbers
+age, name, floatnum = 5, 'asmaa', 1.12345
+mystr = 'My name is %s and I am %d years old, %.2f' % (name, age, floatnum)
+print(mystr)
+# Output: My name is asmaa and I am 5 years old, 1.12
+
+mystr1 = 'My name is {} and I am {} years old, {:.3f}'.format(name, age, floatnum)
+print(mystr1)
+# Output: My name is asmaa and I am 5 years old, 1.123
+
+mystr2 = 'My name is ' + name + ' and I am ' + str(age) + ' years old, ' + str(floatnum)
+print(mystr2)
+# Output: My name is asmaa and I am 5 years old, 1.12345
 
 # -----------------------------------
 
